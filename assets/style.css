@@ -1,0 +1,50 @@
+:root{
+    --pirate-gold: #BB9645;
+    --pirate-darkgold: #4b3c1c;
+    --pirate-brown: #231f20;
+
+    --pirate-darkgrey: #141414;
+    --pirate-lightgrey: #1b1b1b;
+    --pirate-mediumgrey: #6d6d6d;
+    --pirate-mediumgrey2: #212121;
+
+    --pirate-font-headers: "Bai Jamjuree", sans-serif;
+    --pirate-font-body: "IBM Plex Mono", monospace;
+
+    --pirate-body: var(--pirate-lightgrey);
+    --pirate-text: #e1e1e1;
+    --pirate-header: var(--pirate-gold);
+}
+body{
+    font-family: var(--pirate-font-body);
+    color: var(--pirate-text);
+    background-color: var(--pirate-body);
+    margin: 0;
+    padding: 0;
+
+    /* Peertube Variables */
+    --mainColor: #BB9645;
+    --mainColorLighter: hsl(41, 46%, 60%);
+    --mainColorLightest: hsl(41, 46%, 80%);
+    --mainHoverColor: var(--mainColorLighter);
+    --mainBackgroundColor: var(--pirate-body);
+    --mainForegroundColor: var(--pirate-text);
+    --secondaryColor: var(--pirate-brown);
+    --greyForegroundColor: var(--pirate-brown);
+    --greyBackgroundColor: var(--pirate-header);
+    --menuBackgroundColor: var(--pirate-darkgrey);
+    --menuForegroundColor: var(--pirate-header);
+    --submenuBackgroundColor: #f7f7f7;
+    --channelBackgroundColor: #f6ede8;
+    --inputForegroundColor: #000;
+    --inputBackgroundColor: #fff;
+    --inputPlaceholderColor: #898989;
+    --textareaForegroundColor: #000;
+    --textareaBackgroundColor: #fff;
+    --markdownTextareaBackgroundColor: #efefef;
+    --actionButtonColor: var(--pirate-brown);
+    --supportButtonBackgroundColor: var(--pirate-brown);
+    --supportButtonColor: var(--actionButtonColor);
+    --supportButtonHeartColor: var(--pirate-gold);
+    --activatedActionButtonColor: var(--pirate-gold);
+}
