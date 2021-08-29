@@ -9,7 +9,7 @@
     --pirate-mediumgrey2: #212121;
 
     --pirate-font-headers: "Bai Jamjuree", sans-serif;
-    --pirate-font-body: "IBM Plex Mono", monospace;
+    --pirate-font-body: "Montserrat", sans-serif;
 
     --pirate-body: var(--pirate-lightgrey);
     --pirate-text: #e1e1e1;
@@ -30,15 +30,15 @@ body{
     --mainBackgroundColor: var(--pirate-body);
     --mainForegroundColor: var(--pirate-text);
     --secondaryColor: var(--pirate-brown);
-    --greyForegroundColor: var(--pirate-brown);
+    --greyForegroundColor: var(--pirate-text);
     --greyBackgroundColor: var(--pirate-header);
     --menuBackgroundColor: var(--pirate-darkgrey);
     --menuForegroundColor: var(--pirate-header);
     --submenuBackgroundColor: #f7f7f7;
-    --channelBackgroundColor: #f6ede8;
+    --channelBackgroundColor: var(--pirate-gold);
     --inputForegroundColor: #000;
     --inputBackgroundColor: #fff;
-    --inputPlaceholderColor: #898989;
+    --inputPlaceholderColor: var(--pirate-brown);
     --textareaForegroundColor: #000;
     --textareaBackgroundColor: #fff;
     --markdownTextareaBackgroundColor: #efefef;
@@ -47,4 +47,74 @@ body{
     --supportButtonColor: var(--actionButtonColor);
     --supportButtonHeartColor: var(--pirate-gold);
     --activatedActionButtonColor: var(--pirate-gold);
+}
+.header[_ngcontent-doa-c197]{
+    height: 100px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--mainBackgroundColor);
+    z-index: 17500;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.top-left-block[_ngcontent-doa-c197] {
+    z-index: 1;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    min-width: 100%;
+    justify-content: center;
+}
+.top-left-block[_ngcontent-doa-c197] .icon-menu[_ngcontent-doa-c197] {
+    background-color: var(--mainForegroundColor);
+    margin: 0;
+    position: absolute;
+    left: 300px;
+}
+
+@media (max-width: 800px) {
+    .top-left-block[_ngcontent-doa-c197] .icon-menu[_ngcontent-doa-c197] {
+        left: 10%;
+    }
+    .header-right[_ngcontent-doa-c197] {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+}
+.header-right[_ngcontent-doa-c197] {
+    height: initial;
+    display: initial;
+    align-items: initial;
+    justify-content: initial;
+    white-space: nowrap;
+    flex: initial;
+}
+.peertube-title[_ngcontent-doa-c197]{
+    font-size: 40px;
+}
+.peertube-title[_ngcontent-doa-c197]::after {
+    content: " ";
+    width: 50px;
+    height: 50px;
+    background-image: url("/public/images/Pirate_Logo_Coin_Gold.png");
+}
+.menu-wrapper[_ngcontent-doa-c193] {
+    position: fixed;
+    height: 100vh;
+    padding: 0;
+    width: 240px;
+    z-index: 17600;
+    scrollbar-color: var(--actionButtonColor) var(--menuBackgroundColor);
+    top: 0;
+}
+.sub-header-container[_ngcontent-doa-c197] {
+    margin-top: 100px;
+}
+ngb-modal-window {
+    z-index: 18000 !important;
 }
