@@ -3,10 +3,10 @@
     --pirate-darkgold: #4b3c1c;
     --pirate-brown: #231f20;
 
-    --pirate-darkgrey: #141414;
-    --pirate-lightgrey: #1b1b1b;
-    --pirate-mediumgrey: #6d6d6d;
-    --pirate-mediumgrey2: #212121;
+    --pirate-darkgrey: hsl(225, 31%, 5%);
+    --pirate-lightgrey: hsl(225, 31%, 10%);
+    --pirate-mediumgrey: hsl(225, 31%, 40%);
+    --pirate-mediumgrey2: hsl(225, 31%, 20%);
 
     --pirate-font-headers: "Bai Jamjuree", sans-serif;
     --pirate-font-body: "Montserrat", sans-serif;
