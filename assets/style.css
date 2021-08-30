@@ -34,11 +34,11 @@ body{
     --greyBackgroundColor: var(--pirate-header);
     --menuBackgroundColor: var(--pirate-darkgrey);
     --menuForegroundColor: var(--pirate-header);
-    --submenuBackgroundColor: #f7f7f7;
+    --submenuBackgroundColor: var(--pirate-darkgrey);
     --channelBackgroundColor: var(--pirate-gold);
     --inputForegroundColor: #000;
     --inputBackgroundColor: #fff;
-    --inputPlaceholderColor: var(--pirate-brown);
+    --inputPlaceholderColor: var(--pirate-mediumgrey);
     --textareaForegroundColor: #000;
     --textareaBackgroundColor: #fff;
     --markdownTextareaBackgroundColor: #efefef;
@@ -48,7 +48,15 @@ body{
     --supportButtonHeartColor: var(--pirate-gold);
     --activatedActionButtonColor: var(--pirate-gold);
 }
-.header[_ngcontent-doa-c197]{
+a{
+    color: var(--mainColor);
+    transition: color 0.2s ease;
+}
+a:hover{
+    color: var(--mainColorLightest);
+    transition: color 0.2s ease;
+}
+#custom-css .header{
     height: 100px;
     position: fixed;
     top: 0;
@@ -61,7 +69,7 @@ body{
     justify-content: center;
     align-items: center;
 }
-.top-left-block[_ngcontent-doa-c197] {
+#custom-css .top-left-block {
     z-index: 1;
     height: 50px;
     display: flex;
@@ -69,24 +77,30 @@ body{
     min-width: 100%;
     justify-content: center;
 }
-.top-left-block[_ngcontent-doa-c197] .icon-menu[_ngcontent-doa-c197] {
+#custom-css .top-left-block .icon-menu {
     background-color: var(--mainForegroundColor);
     margin: 0;
     position: absolute;
     left: 300px;
 }
 
-@media (max-width: 800px) {
-    .top-left-block[_ngcontent-doa-c197] .icon-menu[_ngcontent-doa-c197] {
-        left: 10%;
+@media screen and (max-width: 800px) {
+    #custom-css .top-left-block .icon-menu {
+        right: 10%;
+        left: initial;
     }
-    .header-right[_ngcontent-doa-c197] {
+    #custom-css .header-right {
         display: flex;
         justify-content: center;
         width: 100%;
     }
 }
-.header-right[_ngcontent-doa-c197] {
+@media screen and (max-width: 500px) {
+    #custom-css .top-left-block .icon-menu {
+        left: 10%;
+    }
+}
+#custom-css .header-right {
     height: initial;
     display: initial;
     align-items: initial;
@@ -94,16 +108,20 @@ body{
     white-space: nowrap;
     flex: initial;
 }
-.peertube-title[_ngcontent-doa-c197]{
+#custom-css .peertube-title{
     font-size: 40px;
 }
-.peertube-title[_ngcontent-doa-c197]::after {
-    content: " ";
-    width: 50px;
-    height: 50px;
-    background-image: url("/public/images/Pirate_Logo_Coin_Gold.png");
+@media screen and (max-width:500px) {
+    #custom-css .peertube-title {
+        display: initial;
+        font-size: 20px;
+    }
+   }
+#custom-css .icon-logo {
+    /* background-image: url("/public/images/Pirate_Logo_Coin_Gold.png"); */
+    background-image: url("https://pirate.black/wp-content/uploads/2019/04/Pirate_Logo_Coin_Gold.png");
 }
-.menu-wrapper[_ngcontent-doa-c193] {
+#custom-css .menu-wrapper {
     position: fixed;
     height: 100vh;
     padding: 0;
@@ -112,9 +130,20 @@ body{
     scrollbar-color: var(--actionButtonColor) var(--menuBackgroundColor);
     top: 0;
 }
-.sub-header-container[_ngcontent-doa-c197] {
+#custom-css .sub-header-container {
     margin-top: 100px;
 }
-ngb-modal-window {
+#custom-css ngb-modal-window {
     z-index: 18000 !important;
+}
+#custom-css ngb-accordion .btn{
+    background-color: var(--mainColor);
+}
+body::after{
+    content: "© Copyright 2021 • Pirate Chain • All rights reserved\APage made with ❤ by Luan Himmlisch";
+    background-color: var(--pirate-darkgrey);
+    white-space: pre; 
+    display: block;
+    padding: 10px 20px;
+    text-align: center;
 }
