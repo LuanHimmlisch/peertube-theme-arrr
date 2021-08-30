@@ -206,6 +206,7 @@ body::after{
 #custom-css .custom-markup-container > div peertube-container:nth-child(1) my-video-miniature > .video-miniature > .video-bottom > .video-miniature-information > .video-miniature-meta > div > .video-miniature-name > .ng-star-inserted{
     display: block;
     text-align: center;
+    text-shadow: 1px 1px white, -1px -1px -10px #444;
     width: 100%;
 }
 #custom-css .header h4{
