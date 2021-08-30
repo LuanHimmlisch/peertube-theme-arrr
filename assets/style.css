@@ -149,6 +149,8 @@ a:hover{
 #custom-css .icon-logo {
     /* background-image: url("/public/images/Pirate_Logo_Coin_Gold.png"); */
     background-image: url("https://raw.githubusercontent.com/LuanHimmlisch/peertube-theme-arrr/master/public/images/dog.png");
+    width: 75px;
+    height: 75px;
 }
 #custom-css .menu-wrapper {
     position: fixed;
@@ -183,7 +185,7 @@ body::after{
     max-width: 100%;
     padding: 100px;
     font-size: 30px;
-    border-image: url("https://raw.githubusercontent.com/LuanHimmlisch/peertube-theme-arrr/master/public/images/woodpanel.png") 1 fill repeat;
+    border-image: url("https://raw.githubusercontent.com/LuanHimmlisch/peertube-theme-arrr/master/public/images/panel.png") 1 fill repeat;
 }
 @media (max-width: 800px) {
     #custom-css .custom-markup-container > div peertube-container:nth-child(1) my-video-miniature{
@@ -211,11 +213,13 @@ body::after{
     margin: 0.5rem 0;
 }
 #custom-css peertube-videos-list + h2{
-    border-image: url("https://raw.githubusercontent.com/LuanHimmlisch/peertube-theme-arrr/master/public/images/woodpanel.png") 1 fill repeat;
+    border-image: url("https://raw.githubusercontent.com/LuanHimmlisch/peertube-theme-arrr/master/public/images/panel.png") 1 fill repeat;
     padding: 50px;
     display: inline-block;
     width: max-content;
     text-shadow: #000 0px 0px 3px;
+    margin-left: auto;
+    margin-top: 100px;
 }
 #custom-css .dropdown{
     z-index: 17601 !important;
