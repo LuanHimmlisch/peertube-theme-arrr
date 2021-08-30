@@ -56,7 +56,13 @@ a:hover{
     color: var(--mainColorLightest);
     transition: color 0.2s ease;
 }
-#custom-css .header{
+#custom-css button, #custom-css .button-link{
+    background-color: var(--mainColor);
+}
+#custom-css .peertube-select-container select{
+    background-color: var(--mainColor);
+}
+#custom-css > my-app > .peertube-container > .header{
     height: 100px;
     position: fixed;
     top: 0;
@@ -146,4 +152,48 @@ body::after{
     display: block;
     padding: 10px 20px;
     text-align: center;
+}
+#custom-css .custom-markup-container > div peertube-container:nth-child(1) .videos{
+    display: block;
+}
+#custom-css .custom-markup-container > div peertube-container:nth-child(1) my-video-miniature{
+    max-width: 100%;
+    padding: 100px;
+    font-size: 30px;
+    border-image: url("https://i.imgur.com/FcuEmqU.png") 1 fill repeat;
+}
+@media (max-width: 800px) {
+    #custom-css .custom-markup-container > div peertube-container:nth-child(1) my-video-miniature{
+        padding: 100px 20px;
+        display: inline-block;
+    }
+}
+#custom-css .custom-markup-container > div peertube-container:nth-child(1) my-video-miniature > .video-miniature > my-video-thumbnail > .video-thumbnail{
+    box-shadow: #000 0px 0px 10px;
+}
+#custom-css .custom-markup-container > div peertube-container:nth-child(1) my-video-miniature > .video-miniature > .video-bottom > .video-actions{
+    display: none;
+}
+#custom-css .custom-markup-container > div peertube-container:nth-child(1) my-video-miniature > .video-miniature > .video-miniature-information{
+    margin: 0;
+    text-align: center;
+}
+#custom-css .custom-markup-container > div peertube-container:nth-child(1) my-video-miniature > .video-miniature > .video-bottom > .video-miniature-information > .video-miniature-meta > div > .video-miniature-name > .ng-star-inserted{
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+#custom-css .header h4{
+    font-size: 20px;
+    margin: 0.5rem 0;
+}
+#custom-css peertube-videos-list + h2{
+    border-image: url("https://i.imgur.com/FcuEmqU.png") 1 fill repeat;
+    padding: 50px;
+    display: inline-block;
+    width: max-content;
+    text-shadow: #000 0px 0px 3px;
+}
+#custom-css .dropdown{
+    z-index: 17601 !important;
 }
