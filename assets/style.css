@@ -1,3 +1,16 @@
+/*
+    Hello dear friend, I see you are a curious fella...
+    Whether you want to create your own theme for Peertube or you want to check my CSS mastery...
+    I will save you the struggle and tell you... 
+    
+    **This is the worst CSS I've done in my life**
+
+    If you are a Peertube developer, please do something about this.
+    The overriding of CSS classes is worst than if I were to install 20 copies of Bootsrap...
+    __Well, at least #custom-css is a nice touch...__
+*/
+
+/* ================ STYLE ================ */
 :root{
     --pirate-gold: #BB9645;
     --pirate-darkgold: #4b3c1c;
@@ -15,6 +28,8 @@
     --pirate-text: #e1e1e1;
     --pirate-header: var(--pirate-gold);
 }
+
+/* PEERTUBE'S VARIABLES OVERRIDE */
 body{
     font-family: var(--pirate-font-body);
     color: var(--pirate-text);
@@ -22,7 +37,7 @@ body{
     margin: 0;
     padding: 0;
 
-    /* Peertube Variables */
+    /* Peertube's Variables */
     --mainColor: #BB9645;
     --mainColorLighter: hsl(41, 46%, 60%);
     --mainColorLightest: hsl(41, 46%, 80%);
@@ -56,6 +71,8 @@ body{
 #custom-css .sub-header-container{
     background: none;
 }
+
+/* ================ ELEMENTS ================ */
 a{
     color: var(--mainColor);
     transition: color 0.2s ease;
@@ -77,6 +94,39 @@ a:hover{
     background-color: var(--mainColorLighter);
     color: #1e1e1e;
 }
+#custom-css .sub-header-container {
+    margin-top: 200px;
+}
+#custom-css ngb-accordion .btn{
+    background-color: var(--mainColor);
+}
+#custom-css .header h4{
+    font-size: 20px;
+    margin: 0.5rem 0;
+}
+#custom-css .playlist .playlist-info{
+    background-color: var(--pirate-mediumgrey2);
+}
+
+/* ================ LAYOUT ================ */
+
+#custom-css my-app > .peertube-container{
+    padding-bottom: 0;
+}
+
+#custom-css ngb-modal-window {
+    z-index: 18000 !important;
+}
+#custom-css .dropdown{
+    z-index: 17601 !important;
+}
+#custom-css .privacy-concerns{
+    z-index: 17601 !important;
+}
+
+/* ================ SECTIONS ================ */
+
+/* HEADER */
 #custom-css > my-app > .peertube-container > .header{
     height: 200px;
     position: fixed;
@@ -159,6 +209,8 @@ a:hover{
     width: 75px;
     height: 75px;
 }
+
+/* SIDEBAR */
 #custom-css .menu-wrapper {
     position: fixed;
     height: 100vh;
@@ -168,23 +220,8 @@ a:hover{
     scrollbar-color: var(--actionButtonColor) var(--menuBackgroundColor);
     top: 0;
 }
-#custom-css .sub-header-container {
-    margin-top: 200px;
-}
-#custom-css ngb-modal-window {
-    z-index: 18000 !important;
-}
-#custom-css ngb-accordion .btn{
-    background-color: var(--mainColor);
-}
-body::after{
-    content: "© Copyright 2021 • Pirate Chain • All rights reserved\APage made with ❤ by Luan Himmlisch";
-    background-color: var(--pirate-darkgrey);
-    white-space: pre; 
-    display: block;
-    padding: 10px 20px;
-    text-align: center;
-}
+
+/* HERO SECTION */
 #custom-css .custom-markup-container > div peertube-container:nth-child(1) .videos{
     display: block;
 }
@@ -214,7 +251,10 @@ body::after{
     display: block;
     text-align: center;
     width: 100%;
+    color: #53281b;
 }
+
+/* HOTTEST VIDEOS SECTION */
 #custom-css .custom-markup-container > div peertube-container:nth-child(2) .peertube-container{
     margin-top: 100px;
 }
@@ -231,13 +271,16 @@ body::after{
 #custom-css .custom-markup-container > div peertube-container:nth-child(2)  .videos .video-wrapper > my-video-miniature > .video-miniature .video-bottom .ng-star-inserted{
     color: #1e1e1e;
 }
+
+/* COURSES SECTION */
 #custom-css .custom-markup-container > div peertube-container:nth-child(3) > .peertube-container{
     background-color: var(--pirate-darkgrey);
+    overflow: hidden;
     position: absolute;
-    z-index: -1;
     height: 100vh;
     width: 100%;
     left: 0;
+    z-index: 1;
 }
 #custom-css .custom-markup-container > div peertube-container:nth-child(3) > .peertube-container > h4 {
     text-align: center;
@@ -249,6 +292,25 @@ body::after{
     display: flex;
     justify-content: center;
     margin-top: 50px;
+}
+@media (max-width: 800px) {
+    #custom-css .custom-markup-container > div peertube-container:nth-child(3) > .peertube-container > peertube-container{
+        flex-wrap: wrap;
+        overflow-y: auto;
+    }
+}
+#custom-css .custom-markup-container > div peertube-container:nth-child(3) > .peertube-container::before{
+    content: "";
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    background-image:  url('https://raw.githubusercontent.com/LuanHimmlisch/peertube-theme-arrr/master/public/images/wave.svg');
 }
 #custom-css .custom-markup-container > div peertube-container:nth-child(3) > .peertube-container::after{
     content: "";
@@ -264,32 +326,73 @@ body::after{
     margin: 0 40px 50px 0;
     z-index: -1;
 }
-#custom-css .custom-markup-container > div peertube-container:nth-child(4){
-    display: none;
+@media (max-width: 500px){
+    #custom-css .custom-markup-container > div peertube-container:nth-child(3) > .peertube-container::after{
+        margin: 0 0 50px 0;
+        transform: translateX(40%);
+        
+    }
 }
-#custom-css .header h4{
-    font-size: 20px;
-    margin: 0.5rem 0;
+
+/* EXPLORE SECTION */
+#custom-css .custom-markup-container > div peertube-container:nth-child(4) > .peertube-container{
+    background-color: var(--pirate-mediumgrey2);
+    margin-top: 100vh;
+    position: absolute;
+    height: 200vh;
+    width: 100%;
+    left: 0;
+    justify-content: center;
+    align-items: center;
 }
-#custom-css peertube-videos-list + h2{
+#custom-css .custom-markup-container > div peertube-container:nth-child(4) > .peertube-container > peertube-videos-list{
+    margin: 50px auto 0;
+    width: 70%;
+}
+#custom-css .custom-markup-container > div peertube-container:nth-child(4) > .peertube-container::after{
+    content: "";
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 50%;
+    width: 100%;
+    background-image:  url('https://raw.githubusercontent.com/LuanHimmlisch/peertube-theme-arrr/master/public/images/wave.svg');
+    -webkit-transform: scaleY(-1) translateY(-100%);
+    transform: scale(-1) translateY(-100%);
+    z-index: -1;
+}
+
+/* CALL TO ACTION SECTION */
+#custom-css .custom-markup-container > div peertube-container:nth-child(5) > .peertube-container > h2{
     border-image: url("https://raw.githubusercontent.com/LuanHimmlisch/peertube-theme-arrr/master/public/images/panel.png") 0 fill repeat;
     padding: 100px;
     display: inline-block;
-    width: max-content;
     text-shadow: #000 0px 0px 3px;
-    margin: 0 auto;
-    margin-top: 100px;
+    margin: 350vh auto 100px;
     font-size: 40px;
     letter-spacing: 5px;
     font-weight: bold;
 }
-#custom-css peertube-videos-list + h2 a{
+@media (max-width: 500px) {
+    #custom-css .custom-markup-container > div peertube-container:nth-child(5) > .peertube-container > h2{
+        padding: 100px 25px;
+        text-align: center;
+    }
+}
+#custom-css .custom-markup-container > div peertube-container:nth-child(5) > .peertube-container > h2 a{
     text-decoration: underline;
     color: #53281b;
 }
-#custom-css .dropdown{
-    z-index: 17601 !important;
-}
-#custom-css .privacy-concerns{
-    z-index: 17601 !important;
+
+/* FOOTER SECTION */
+.main-col::after{
+    content: "© Copyright 2021 • Pirate Chain • All rights reserved\APage made with ❤ by Luan Himmlisch";
+    background-color: var(--pirate-darkgrey);
+    white-space: pre; 
+    display: block;
+    padding: 10px 20px;
+    text-align: center;
 }
