@@ -240,6 +240,7 @@ body::after{
 }
 #custom-css peertube-videos-list + h2 a{
     text-decoration: underline;
+    color: var(--pirate-brown);
 }
 #custom-css .dropdown{
     z-index: 17601 !important;
