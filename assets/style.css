@@ -6,7 +6,7 @@
     --pirate-darkgrey: hsl(225, 31%, 5%);
     --pirate-lightgrey: hsl(225, 31%, 10%);
     --pirate-mediumgrey: hsl(225, 31%, 40%);
-    --pirate-mediumgrey2: hsl(225, 31%, 20%);
+    --pirate-mediumgrey2: #232b43;
 
     --pirate-font-headers: "Bai Jamjuree", sans-serif;
     --pirate-font-body: "Montserrat", sans-serif;
@@ -213,15 +213,60 @@ body::after{
 #custom-css .custom-markup-container > div peertube-container:nth-child(1) my-video-miniature > .video-miniature > .video-bottom > .video-miniature-information > .video-miniature-meta > div > .video-miniature-name > .ng-star-inserted{
     display: block;
     text-align: center;
-    text-shadow: 1px 1px white, -1px -1px -10px #444;
     width: 100%;
 }
-#custom-css .custom-markup-container > div peertube-container:nth-child(2) .videos .video-wrapper > my-video-miniature > .video-miniature{
-    padding: 20px;
-    background-color: #b28355;
-    border: 10px solid #53281b;
+#custom-css .custom-markup-container > div peertube-container:nth-child(2) .peertube-container{
+    margin-top: 100px;
 }
-
+#custom-css .custom-markup-container > div peertube-container:nth-child(2) .videos .video-wrapper > my-video-miniature > .video-miniature{
+    border-image:  url("https://raw.githubusercontent.com/LuanHimmlisch/peertube-theme-arrr/master/public/images/paper.png") 0 fill;
+    padding: 30px;
+}
+#custom-css .custom-markup-container > div peertube-container:nth-child(2) .videos .video-wrapper > my-video-miniature > .video-miniature .video-thumbnail{
+    border: solid 2px #5a3814;
+}
+#custom-css .custom-markup-container > div peertube-container:nth-child(2)  .videos .video-wrapper > my-video-miniature > .video-miniature .video-bottom > .video-actions{
+    display: hidden;
+}
+#custom-css .custom-markup-container > div peertube-container:nth-child(2)  .videos .video-wrapper > my-video-miniature > .video-miniature .video-bottom .ng-star-inserted{
+    color: #1e1e1e;
+}
+#custom-css .custom-markup-container > div peertube-container:nth-child(3) > .peertube-container{
+    background-color: var(--pirate-darkgrey);
+    position: absolute;
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+    left: 0;
+}
+#custom-css .custom-markup-container > div peertube-container:nth-child(3) > .peertube-container > h4 {
+    text-align: center;
+    margin-top: 75px;
+    font-weight: bold;
+    font-size: 30px;
+}
+#custom-css .custom-markup-container > div peertube-container:nth-child(3) > .peertube-container > peertube-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+#custom-css .custom-markup-container > div peertube-container:nth-child(3) > .peertube-container::after{
+    content: "";
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    background-image:  url('https://raw.githubusercontent.com/LuanHimmlisch/peertube-theme-arrr/master/public/images/ship.png');
+    height: 100%;
+    width: 100%;
+    margin: 0 40px 50px 0;
+    z-index: -1;
+}
+#custom-css .custom-markup-container > div peertube-container:nth-child(4){
+    display: none;
+}
 #custom-css .header h4{
     font-size: 20px;
     margin: 0.5rem 0;
@@ -232,7 +277,7 @@ body::after{
     display: inline-block;
     width: max-content;
     text-shadow: #000 0px 0px 3px;
-    margin-left: auto;
+    margin: 0 auto;
     margin-top: 100px;
     font-size: 40px;
     letter-spacing: 5px;
@@ -240,8 +285,11 @@ body::after{
 }
 #custom-css peertube-videos-list + h2 a{
     text-decoration: underline;
-    color: var(--pirate-brown);
+    color: #53281b;
 }
 #custom-css .dropdown{
+    z-index: 17601 !important;
+}
+#custom-css .privacy-concerns{
     z-index: 17601 !important;
 }
