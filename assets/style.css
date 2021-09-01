@@ -81,8 +81,8 @@ a:hover{
     color: var(--mainColorLightest);
     transition: color 0.2s ease;
 }
-#custom-css .grey-button, #custom-css .delete-history{
-    color: #1e1e1e;
+#custom-css .grey-button, .grey-button, #custom-css .delete-history{
+    color: #1e1e1e !important;
 }
 #custom-css .top-buttons .delete-history my-global-icon .feather{
     color: #1e1e1e;
