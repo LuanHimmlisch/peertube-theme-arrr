@@ -16,8 +16,8 @@
     --pirate-darkgold: #4b3c1c;
     --pirate-brown: #231f20;
 
-    --pirate-darkgrey: hsl(225, 31%, 5%);
-    --pirate-lightgrey: hsl(225, 31%, 10%);
+    --pirate-darkgrey: rgb(9, 11, 17);
+    --pirate-lightgrey: #121621;
     --pirate-mediumgrey: hsl(225, 31%, 40%);
     --pirate-mediumgrey2: #232b43;
 
@@ -81,11 +81,8 @@ a:hover{
     color: var(--mainColorLightest);
     transition: color 0.2s ease;
 }
-#custom-css .grey-button, .grey-button, #custom-css .delete-history{
+#custom-css .grey-button, #custom-css .grey-button .feather, #custom-css .delete-history .feather, #custom-css .delete-history{
     color: #1e1e1e !important;
-}
-#custom-css .top-buttons .delete-history my-global-icon .feather{
-    color: #1e1e1e;
 }
 #custom-css .button-link{
     background-color: var(--mainColor);
@@ -93,6 +90,15 @@ a:hover{
 #custom-css .peertube-select-container select{
     background-color: var(--mainColorLighter);
     color: #1e1e1e;
+}
+#custom-css .action-button.button-styled.grey{
+    background-color: var(--pirate-mediumgrey2);
+}
+#custom-css .upload-progress-cancel input{
+    background-color: #883921;
+}
+#custom-css .playlist-buttons .share-button{
+    background-color: var(--pirate-mediumgrey);
 }
 #custom-css .sub-header-container {
     margin-top: 200px;
@@ -118,6 +124,9 @@ a:hover{
     z-index: 18000 !important;
 }
 #custom-css .dropdown{
+    z-index: 12498 !important;
+}
+body#custom-css > .dropdown:last-child{
     z-index: 17601 !important;
 }
 #custom-css .privacy-concerns{
@@ -261,6 +270,7 @@ a:hover{
 #custom-css .custom-markup-container > div peertube-container:nth-child(2) .videos .video-wrapper > my-video-miniature > .video-miniature{
     border-image:  url("https://raw.githubusercontent.com/LuanHimmlisch/peertube-theme-arrr/master/public/images/paper.png") 0 fill;
     padding: 30px;
+    margin-bottom: 50px;
 }
 #custom-css .custom-markup-container > div peertube-container:nth-child(2) .videos .video-wrapper > my-video-miniature > .video-miniature .video-thumbnail{
     border: solid 2px #5a3814;
@@ -279,6 +289,7 @@ a:hover{
     position: absolute;
     height: 100vh;
     width: 100%;
+    margin-top: 100px;
     left: 0;
     z-index: 1;
 }
