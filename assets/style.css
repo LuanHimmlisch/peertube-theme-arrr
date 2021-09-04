@@ -360,6 +360,15 @@ body#custom-css > .dropdown:last-child{
     margin: 50px auto 0;
     width: 70%;
 }
+@media (max-width:800px){
+    #custom-css .custom-markup-container > div peertube-container:nth-child(4) > .peertube-container > .header{
+        margin-top: 200px;
+    }
+    #custom-css .custom-markup-container > div peertube-container:nth-child(4) > .peertube-container > peertube-videos-list{
+        overflow-y: auto;
+        width: 100%;
+    }
+}
 #custom-css .custom-markup-container > div peertube-container:nth-child(4) > .peertube-container::after{
     content: "";
     left: 0;
